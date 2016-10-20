@@ -1,0 +1,5 @@
+C:\Users\R2d2\documents\visual studio 2010\Projects\PrzeciazenieFunkcji\PrzeciazenieFunkcji\bin\Debug\PrzeciazenieFunkcji.exe
+C:\Users\R2d2\documents\visual studio 2010\Projects\PrzeciazenieFunkcji\PrzeciazenieFunkcji\bin\Debug\PrzeciazenieFunkcji.pdb
+C:\Users\R2d2\documents\visual studio 2010\Projects\PrzeciazenieFunkcji\PrzeciazenieFunkcji\obj\x86\Debug\PrzeciazenieFunkcji.csprojResolveAssemblyReference.cache
+C:\Users\R2d2\documents\visual studio 2010\Projects\PrzeciazenieFunkcji\PrzeciazenieFunkcji\obj\x86\Debug\PrzeciazenieFunkcji.exe
+C:\Users\R2d2\documents\visual studio 2010\Projects\PrzeciazenieFunkcji\PrzeciazenieFunkcji\obj\x86\Debug\PrzeciazenieFunkcji.pdb
