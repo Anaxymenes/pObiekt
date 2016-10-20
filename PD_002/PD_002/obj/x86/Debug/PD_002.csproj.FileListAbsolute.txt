@@ -1,0 +1,4 @@
+C:\Users\R2d2\AppData\Local\Temporary Projects\PD_002\bin\Debug\PD_002.exe
+C:\Users\R2d2\AppData\Local\Temporary Projects\PD_002\bin\Debug\PD_002.pdb
+C:\Users\R2d2\AppData\Local\Temporary Projects\PD_002\obj\x86\Debug\PD_002.exe
+C:\Users\R2d2\AppData\Local\Temporary Projects\PD_002\obj\x86\Debug\PD_002.pdb
