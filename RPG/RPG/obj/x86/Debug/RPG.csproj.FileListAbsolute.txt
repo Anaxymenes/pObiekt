@@ -1,0 +1,17 @@
+C:\Users\Faith\AppData\Local\Temporary Projects\RPG\bin\Debug\RPG.exe
+C:\Users\Faith\AppData\Local\Temporary Projects\RPG\bin\Debug\RPG.pdb
+C:\Users\Faith\AppData\Local\Temporary Projects\RPG\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Faith\AppData\Local\Temporary Projects\RPG\obj\x86\Debug\RPG.Properties.Resources.resources
+C:\Users\Faith\AppData\Local\Temporary Projects\RPG\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Faith\AppData\Local\Temporary Projects\RPG\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Faith\AppData\Local\Temporary Projects\RPG\obj\x86\Debug\RPG.exe
+C:\Users\Faith\AppData\Local\Temporary Projects\RPG\obj\x86\Debug\RPG.pdb
+C:\Anaxymenes\C#\RPG\RPG\obj\x86\Debug\RPG.exe
+C:\Anaxymenes\C#\RPG\RPG\obj\x86\Debug\RPG.pdb
+C:\Anaxymenes\C#\RPG\RPG\bin\Debug\RPG.exe
+C:\Anaxymenes\C#\RPG\RPG\bin\Debug\RPG.pdb
+C:\Anaxymenes\C#\RPG\RPG\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Anaxymenes\C#\RPG\RPG\obj\x86\Debug\RPG.Properties.Resources.resources
+C:\Anaxymenes\C#\RPG\RPG\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Anaxymenes\C#\RPG\RPG\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Anaxymenes\C#\RPG\RPG\obj\x86\Debug\RPG.Form1.resources
