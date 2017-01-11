@@ -5,10 +5,10 @@ using System.Text;
 
 namespace Kalkulator
 {
-    class Numbers
+    class Numbers:IRemoveIndex
     {
         protected List<double> numbersList;
-        public List<double> MyProperty { get { return this.numbersList;  } set { } }
+        public List<double> NumberList { get { return this.numbersList;  } set { } }
         public void AddNumber(string numbers)
         {
             try
@@ -32,6 +32,20 @@ namespace Kalkulator
                 throw;
             }
         }
+        public virtual void EditNumber(int index, double value)
+        {
+            this.numbersList[index] = value;
+            this.numbersList.Remove(index + 1);
+        }
+        public virtual double GetOneNumber(int index)
+        {
+            return this.numbersList[index];
+        }
+        public void Remove(int index)
+        {
+            this.numbersList.RemoveAt(index);
+        }
+
         //Konstruktor
         public Numbers()
         {

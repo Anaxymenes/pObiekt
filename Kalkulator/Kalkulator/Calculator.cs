@@ -16,9 +16,12 @@ namespace Kalkulator
             {
                 string operation = this.display.Operation();
                 this.Separate(operation);
+                this.Count();
                 this.display.Again();
+
             }
         }
+        
         protected virtual void Separate(string operation)
         {
             int start = 0;
@@ -41,7 +44,28 @@ namespace Kalkulator
             {
 
             }
-        } 
+        }
+
+        public void Count()
+        {
+            Operations operations = new Operations();
+            while (this.symbols.FindSymbol(2,3) > 0 )
+            {
+                int index = this.symbols.FindIndex(2, 3);
+                this.numbers.EditNumber(index,operations.Count(this.numbers.GetOneNumber(index),this.numbers.GetOneNumber(index+1),this.symbols.GetSymbol(index)));
+                this.symbols.Remove(index);
+                //Console.WriteLine("Znalazlem znak mnozenia badz dzielenia");
+            }
+            while (this.symbols.FindSymbol(1) > 0)
+            {
+                //Console.WriteLine("Znalazlem znak sumy");
+                int index = this.symbols.FindIndex(1);
+                this.numbers.EditNumber(index, operations.Count(this.numbers.GetOneNumber(index), this.numbers.GetOneNumber(index + 1), this.symbols.GetSymbol(index)));
+                this.symbols.Remove(index);
+            }
+            Console.WriteLine("\nWynik:" + this.numbers.GetOneNumber(0));
+        }
+
         //Konstruktor
         public Calculator()
         {

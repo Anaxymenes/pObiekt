@@ -46,7 +46,9 @@
     <Compile Include="Calculator.cs" />
     <Compile Include="CalculatorDisplay.cs" />
     <Compile Include="ICount.cs" />
+    <Compile Include="IRemoveIndex.cs" />
     <Compile Include="Numbers.cs" />
+    <Compile Include="Operations.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Symbols.cs" />
