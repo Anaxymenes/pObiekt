@@ -5,11 +5,12 @@ using System.Text;
 
 namespace Kalkulator
 {
-    class Program
+    class Symbols
     {
-        static void Main(string[] args)
+        protected List<int> symbolsList;
+        public Symbols()
         {
-            Calculator calculator = new Calculator();
+            this.symbolsList = new List<int>();
         }
     }
 }
