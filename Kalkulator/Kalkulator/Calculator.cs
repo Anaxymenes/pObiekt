@@ -15,7 +15,31 @@ namespace Kalkulator
             while (true)
             {
                 string operation = this.display.Operation();
+                this.Separate(operation);
                 this.display.Again();
+            }
+        }
+        protected virtual void Separate(string operation)
+        {
+            int start = 0;
+            try
+            {
+                for (int i = 0; i < operation.Length; i++)
+                {
+                    if (operation[i] == '+' || (operation[i] == '-' && i > 0) ||
+                        operation[i] == '/' || operation[i] == '*')
+                    {
+                        this.numbers.AddNumber(operation.Substring(start, i - start));
+                        start = i + 1;
+                        if (operation[i] == '-') start = i;
+                        this.symbols.AddSymbol(operation[i]);
+                    }
+                }
+                this.numbers.AddNumber(operation.Substring(start));
+            }
+            catch
+            {
+
             }
         } 
         //Konstruktor
