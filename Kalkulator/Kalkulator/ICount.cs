@@ -5,12 +5,8 @@ using System.Text;
 
 namespace Kalkulator
 {
-    class Program
+    interface ICount
     {
-        static void Main(string[] args)
-        {
-
-            Console.ReadKey();
-        }
+        double Count(double a, double b, int symbol);
     }
 }

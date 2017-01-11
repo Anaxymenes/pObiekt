@@ -1,0 +1,5 @@
+E:\Projekty\Kalkulator\Kalkulator\Kalkulator\bin\Debug\Kalkulator.exe
+E:\Projekty\Kalkulator\Kalkulator\Kalkulator\bin\Debug\Kalkulator.pdb
+E:\Projekty\Kalkulator\Kalkulator\Kalkulator\obj\x86\Debug\Kalkulator.csprojResolveAssemblyReference.cache
+E:\Projekty\Kalkulator\Kalkulator\Kalkulator\obj\x86\Debug\Kalkulator.exe
+E:\Projekty\Kalkulator\Kalkulator\Kalkulator\obj\x86\Debug\Kalkulator.pdb
