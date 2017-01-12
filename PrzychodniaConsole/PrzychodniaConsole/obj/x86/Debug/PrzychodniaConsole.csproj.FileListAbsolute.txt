@@ -1,0 +1,5 @@
+E:\Projekty\PrzychodniaConsole\PrzychodniaConsole\bin\Debug\PrzychodniaConsole.exe
+E:\Projekty\PrzychodniaConsole\PrzychodniaConsole\bin\Debug\PrzychodniaConsole.pdb
+E:\Projekty\PrzychodniaConsole\PrzychodniaConsole\obj\x86\Debug\PrzychodniaConsole.exe
+E:\Projekty\PrzychodniaConsole\PrzychodniaConsole\obj\x86\Debug\PrzychodniaConsole.pdb
+E:\Projekty\PrzychodniaConsole\PrzychodniaConsole\obj\x86\Debug\PrzychodniaConsole.csprojResolveAssemblyReference.cache
