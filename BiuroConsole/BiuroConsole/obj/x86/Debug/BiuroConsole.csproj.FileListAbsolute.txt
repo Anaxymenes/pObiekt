@@ -1,0 +1,5 @@
+E:\Projekty\BiuroConsole\BiuroConsole\bin\Debug\BiuroConsole.exe
+E:\Projekty\BiuroConsole\BiuroConsole\bin\Debug\BiuroConsole.pdb
+E:\Projekty\BiuroConsole\BiuroConsole\obj\x86\Debug\BiuroConsole.csprojResolveAssemblyReference.cache
+E:\Projekty\BiuroConsole\BiuroConsole\obj\x86\Debug\BiuroConsole.exe
+E:\Projekty\BiuroConsole\BiuroConsole\obj\x86\Debug\BiuroConsole.pdb
