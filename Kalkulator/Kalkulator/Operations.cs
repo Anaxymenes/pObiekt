@@ -11,20 +11,23 @@ namespace Kalkulator
         {
             try
             {
+                double wynik = 0;
                 switch (symbol)
                 {
                     case 1:
-                        return (double) a + b;
+                        wynik =  a + b;
                         break;
                     case 2:
-                        return a * b;
+                        wynik = a * b;
                         break;
                     case 3:
-                        return a / b;
+                        wynik = a / b;
                         break;
                     default:
-                        return 0;
+                        wynik = 0;
+                        break;
                 }
+                return wynik;
             }
             catch
             {

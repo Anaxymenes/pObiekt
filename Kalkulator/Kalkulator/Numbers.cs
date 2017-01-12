@@ -45,7 +45,10 @@ namespace Kalkulator
         {
             this.numbersList.RemoveAt(index);
         }
-
+        public virtual void ClearNumberList()
+        {
+            this.numbersList.Clear();
+        }
         //Konstruktor
         public Numbers()
         {

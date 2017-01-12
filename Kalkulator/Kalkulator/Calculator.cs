@@ -16,7 +16,6 @@ namespace Kalkulator
             {
                 string operation = this.display.Operation();
                 this.Separate(operation);
-                this.Count();
                 this.display.Again();
 
             }
@@ -39,6 +38,7 @@ namespace Kalkulator
                     }
                 }
                 this.numbers.AddNumber(operation.Substring(start));
+                this.Count();
             }
             catch
             {
@@ -64,6 +64,7 @@ namespace Kalkulator
                 this.symbols.Remove(index);
             }
             Console.WriteLine("\nWynik:" + this.numbers.GetOneNumber(0));
+            this.numbers.ClearNumberList();
         }
 
         //Konstruktor
