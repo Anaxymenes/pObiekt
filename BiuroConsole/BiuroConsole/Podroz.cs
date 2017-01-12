@@ -27,8 +27,16 @@ namespace BiuroConsole
 
         public void UsunOstatni()
         {
-            int index = this.planPodrozy.Count();
-            this.planPodrozy.RemoveAt(index-1);
+            try
+            {
+                int index = this.planPodrozy.Count();
+                this.planPodrozy.RemoveAt(index - 1);
+            }
+            catch(NullReferenceException eNull)
+            {
+                Console.WriteLine("Brak obiektów do usunięcia\nNaciśnij klawisz by kontynuować...");
+                Console.ReadKey();
+            }
         }
 
         public void Wyczysc()
@@ -38,7 +46,6 @@ namespace BiuroConsole
 
         public void UstawDate(DateTime data)
         {
-            Console.WriteLine("Tu jestem");
             this.dataPodrozy = new DateTime();
             this.dataPodrozy = data;
         }

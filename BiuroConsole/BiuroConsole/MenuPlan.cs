@@ -18,12 +18,27 @@ namespace BiuroConsole
                 Console.WriteLine("Wybierz co chcesz zrobić:");
                 Console.WriteLine("C - Sprawdź aktualnie ustawioną podróż");
                 Console.WriteLine("D - Ustal datę podróży");
+                Console.WriteLine("S - Dodaj samolot");
+                Console.WriteLine("A - Dodaj autobus");
+                Console.WriteLine("U - Usuń ostatnią pozycję z planu podróży");
                 Console.WriteLine("B - Powrót");
                 ConsoleKeyInfo eKey = Console.ReadKey();
                 if (eKey.Key == ConsoleKey.C) CheckCurrentTravel();
                 if (eKey.Key == ConsoleKey.B) break;
                 if (eKey.Key == ConsoleKey.D) this.podroz.UstawDate(AddTravelDate());
+                if (eKey.Key == ConsoleKey.A) this.AddBus();
+                if (eKey.Key == ConsoleKey.S) this.AddPlane();
+                if (eKey.Key == ConsoleKey.U) this.podroz.UsunOstatni();
+
             }
+        }
+        protected virtual void AddBus()
+        {
+            AddBus newBud = new AddBus(this.podroz);
+        }
+        protected virtual void AddPlane()
+        {
+            AddPlane newPlane = new AddPlane(this.podroz);
         }
         protected virtual void CheckCurrentTravel()
         {
@@ -39,6 +54,7 @@ namespace BiuroConsole
             Console.WriteLine("Naciśnij klawisz by kontynuować...");
             Console.ReadKey();
         }
+        
         protected virtual DateTime AddTravelDate()
         {
             Date date = new Date();
