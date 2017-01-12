@@ -34,6 +34,10 @@ namespace Kalkulator
             int temp = this.symbolsList[index];
             return temp;
         }
+        public virtual void ClearAllSymbols()
+        {
+            this.symbolsList.Clear();
+        } 
         public virtual void Remove(int index)
         {
             //Console.WriteLine("Usuwam o indexie " + index);

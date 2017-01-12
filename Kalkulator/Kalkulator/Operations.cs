@@ -15,13 +15,16 @@ namespace Kalkulator
                 switch (symbol)
                 {
                     case 1:
-                        wynik =  a + b;
+                        wynik = a + b;
                         break;
                     case 2:
                         wynik = a * b;
                         break;
                     case 3:
-                        wynik = a / b;
+                        if (b != (double)0)
+                            wynik = a / b;
+                        else
+                            wynik = (int)a / (int)b;
                         break;
                     default:
                         wynik = 0;
@@ -29,8 +32,19 @@ namespace Kalkulator
                 }
                 return wynik;
             }
-            catch
+            catch (DivideByZeroException eByZero)
             {
+                Console.WriteLine("Nie dziel przez zero!\nError:" + eByZero.Message);
+                throw;
+            }
+            catch (ArgumentOutOfRangeException eOutOfRange)
+            {
+                Console.WriteLine("Przekroczono zakres!\nError:" + eOutOfRange.Message);
+                throw;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error:" + e.Message);
                 throw;
             }
         }

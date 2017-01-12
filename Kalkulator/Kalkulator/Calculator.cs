@@ -12,15 +12,26 @@ namespace Kalkulator
         CalculatorDisplay display;
         protected virtual void Menu()
         {
-            while (true)
+            try
             {
                 string operation = this.display.Operation();
                 this.Separate(operation);
-                this.display.Again();
-
             }
+            catch
+            {
+                this.symbols.ClearAllSymbols();
+                this.numbers.ClearNumberList();
+            }
+            this.display.Again();
+            this.Menu();
         }
-        
+        protected virtual void ShowMeAllNumbers()
+        {
+            Console.WriteLine("Oto podane liczby");
+            foreach (var c in this.numbers.NumberList)
+                Console.Write(c + ";");
+            Console.WriteLine("");
+        }
         protected virtual void Separate(string operation)
         {
             int start = 0;
@@ -38,33 +49,45 @@ namespace Kalkulator
                     }
                 }
                 this.numbers.AddNumber(operation.Substring(start));
+                //this.ShowMeAllNumbers(); //Do sprawdzania poprawności separacji
                 this.Count();
             }
             catch
             {
-
+                throw;
             }
         }
 
         public void Count()
         {
-            Operations operations = new Operations();
-            while (this.symbols.FindSymbol(2,3) > 0 )
+            try
             {
-                int index = this.symbols.FindIndex(2, 3);
-                this.numbers.EditNumber(index,operations.Count(this.numbers.GetOneNumber(index),this.numbers.GetOneNumber(index+1),this.symbols.GetSymbol(index)));
-                this.symbols.Remove(index);
-                //Console.WriteLine("Znalazlem znak mnozenia badz dzielenia");
+                Operations operations = new Operations();
+                while (this.symbols.FindSymbol(2, 3) > 0)
+                {
+                    int index = this.symbols.FindIndex(2, 3);
+                    double wynik = 0;
+                    wynik = operations.Count(this.numbers.GetOneNumber(index), this.numbers.GetOneNumber(index + 1), this.symbols.GetSymbol(index));
+                    this.numbers.EditNumber(index,wynik);
+                    this.symbols.Remove(index);
+                    //Console.WriteLine("Znalazlem znak mnozenia badz dzielenia");
+                }
+                while (this.symbols.FindSymbol(1) > 0)
+                {
+                    //Console.WriteLine("Znalazlem znak sumy");
+                    int index = this.symbols.FindIndex(1);
+                    //Console.WriteLine("Opracja na liczbach: {0} i {1}", this.numbers.GetOneNumber(index), this.numbers.GetOneNumber(index));
+                    this.numbers.EditNumber(index, operations.Count(this.numbers.GetOneNumber(index), this.numbers.GetOneNumber(index + 1), this.symbols.GetSymbol(index)));
+                    this.symbols.Remove(index);
+                }
+                Console.WriteLine("\nWynik:" + this.numbers.GetOneNumber(0));
+                this.numbers.ClearNumberList();
             }
-            while (this.symbols.FindSymbol(1) > 0)
+            catch
             {
-                //Console.WriteLine("Znalazlem znak sumy");
-                int index = this.symbols.FindIndex(1);
-                this.numbers.EditNumber(index, operations.Count(this.numbers.GetOneNumber(index), this.numbers.GetOneNumber(index + 1), this.symbols.GetSymbol(index)));
-                this.symbols.Remove(index);
+                Console.WriteLine("Spróbuj jeszcze raz!");
+                throw;
             }
-            Console.WriteLine("\nWynik:" + this.numbers.GetOneNumber(0));
-            this.numbers.ClearNumberList();
         }
 
         //Konstruktor

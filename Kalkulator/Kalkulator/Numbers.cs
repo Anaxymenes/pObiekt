@@ -35,7 +35,7 @@ namespace Kalkulator
         public virtual void EditNumber(int index, double value)
         {
             this.numbersList[index] = value;
-            this.numbersList.Remove(index + 1);
+            this.Remove(index + 1);
         }
         public virtual double GetOneNumber(int index)
         {
@@ -43,12 +43,14 @@ namespace Kalkulator
         }
         public void Remove(int index)
         {
+            //Console.WriteLine("Usuwam liczbę {0} i indeksie {1}", this.numbersList[index], index);//Do testów
             this.numbersList.RemoveAt(index);
         }
         public virtual void ClearNumberList()
         {
             this.numbersList.Clear();
         }
+
         //Konstruktor
         public Numbers()
         {
