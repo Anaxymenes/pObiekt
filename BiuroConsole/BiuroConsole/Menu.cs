@@ -8,6 +8,7 @@ namespace BiuroConsole
     class Menu
     {
         MenuPlan menuPlan;
+        Podroz podroz;
         protected void DisplayManu()
         {
             while(true)
@@ -18,7 +19,7 @@ namespace BiuroConsole
                 Console.WriteLine("P - Zaplanuj plan podróży");
                 Console.WriteLine("E - Wyjscie z aplikacji");
                 ConsoleKeyInfo eKey = Console.ReadKey();
-                if (eKey.Key == ConsoleKey.P) this.menuPlan.Menu();
+                if (eKey.Key == ConsoleKey.P) {  this.menuPlan.Menu(); }
                 if (eKey.Key == ConsoleKey.E) Environment.Exit(0);
             }
         }
@@ -26,7 +27,8 @@ namespace BiuroConsole
         //konstruktor
         public Menu()
         {
-            this.menuPlan = new MenuPlan();
+            this.podroz = new Podroz();
+            this.menuPlan = new MenuPlan(this.podroz);
             this.DisplayManu();
         }
     }

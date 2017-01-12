@@ -38,20 +38,32 @@ namespace BiuroConsole
 
         public void UstawDate(DateTime data)
         {
+            Console.WriteLine("Tu jestem");
+            this.dataPodrozy = new DateTime();
             this.dataPodrozy = data;
         }
 
         public bool SprawdzDate()
         {
-            if (this.dataPodrozy > DateTime.Now)
-                return true;
-            else
+            try
+            {
+                if (this.dataPodrozy > DateTime.Now)
+                    return true;
+                else
+                    return false;
+            }
+            catch (NullReferenceException eNull)
+            {
+                Console.WriteLine("Brak ustalonej daty podróży!");
                 return false;
+            }
         }
 
         public override string ToString()
         {
-            string txt = "Plan podróży:";
+            string txt = "";
+            if (SprawdzDate() == true) txt += "Data podróży: " + this.dataPodrozy;
+            txt += "Plan podróży:";
             foreach (var c in this.planPodrozy)
                 txt += "\n" + c.ToString();
             //for (int i = 0; i < this.planPodrozy.Count; i++)

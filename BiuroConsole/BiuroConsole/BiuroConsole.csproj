@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Autobus.cs" />
+    <Compile Include="Date.cs" />
     <Compile Include="IData.cs" />
     <Compile Include="IZarzadzaj.cs" />
     <Compile Include="Menu.cs" />
