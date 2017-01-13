@@ -1,0 +1,6 @@
+D:\AC\Program13022017\Program13022017\bin\Debug\Program13022017.exe.config
+D:\AC\Program13022017\Program13022017\bin\Debug\Program13022017.exe
+D:\AC\Program13022017\Program13022017\bin\Debug\Program13022017.pdb
+D:\AC\Program13022017\Program13022017\obj\Debug\Program13022017.csprojResolveAssemblyReference.cache
+D:\AC\Program13022017\Program13022017\obj\Debug\Program13022017.exe
+D:\AC\Program13022017\Program13022017\obj\Debug\Program13022017.pdb
